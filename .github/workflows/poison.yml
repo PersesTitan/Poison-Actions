@@ -22,4 +22,4 @@ jobs:
           echo Install OTL
           curl https://raw.githubusercontent.com/OTLanguage/download/main/mac.sh | sh
       - name: 'install poison model'
-        run: sh ${OTL_HOME}/otl install poison
+        run: echo "$otl install poison"
