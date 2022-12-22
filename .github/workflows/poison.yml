@@ -31,9 +31,9 @@ jobs:
       
       - name: 'test'
         run: |
-          ls
-#          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-#          brew install tree
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          brew install tree
+          tree $OTL_HOME
       
       # 실행
       - name: 'start'
