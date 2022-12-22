@@ -11,8 +11,9 @@ jobs:
   build:
     runs-on: macos-latest
 
-    setup:
-    - name: 'otl install'
-      run: |
-        echo Install OTL
-        curl https://raw.githubusercontent.com/OTLanguage/download/main/mac.sh | sh
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'otl install'
+        run: |
+          echo Install OTL
+          curl https://raw.githubusercontent.com/OTLanguage/download/main/mac.sh | sh
