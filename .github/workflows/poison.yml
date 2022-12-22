@@ -15,13 +15,11 @@ jobs:
       # 환경 변수 설정
       - name: 'set env'
         env:
-          OTL_HOME: $HOME/.otl
-          otl: sh $OTL_HOME/otl
+          OTL_HOME: env.HOME/.otl
+          otl: sh env.OTL_HOME/otl
         run: |
           echo OTL_HOME = $OTL_HOME
           echo otl = $otl
-          lets-see -a
-
         
       - name: 'otl install'
         run: |
