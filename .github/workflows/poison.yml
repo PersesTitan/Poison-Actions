@@ -29,6 +29,12 @@ jobs:
           sh $OTL_HOME/otl install poison
         shell: bash
       
+      - name: 'test'
+        run: |
+          ls
+#          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#          brew install tree
+      
       # 실행
       - name: 'start'
         run: |
