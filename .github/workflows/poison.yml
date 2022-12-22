@@ -17,6 +17,14 @@ jobs:
     runs-on: macos-latest
 
     steps:
+      - name: 'set env'
+        env:
+          OTL_HOME: $HOME/.otl
+          otl: sh $OTL_HOME/otl
+        run: |
+          echo OTL_HOME = $OTL_HOME
+          echo otl = $otl
+    
       - name: 'otl install'
         run: |
           echo Install OTL
