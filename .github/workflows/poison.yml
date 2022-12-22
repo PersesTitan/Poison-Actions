@@ -10,7 +10,7 @@ on:
 # 환경 변수 설정
 env:
   OTL_HOME: ${HOME}/.otl
-  otl: sh "$OTL_HOME/otl"
+  otl: sh "${OTL_HOME}/otl"
 
 jobs:
   build:
