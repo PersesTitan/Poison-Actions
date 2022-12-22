@@ -12,8 +12,9 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v2
       - name: 'otl install'
         run: |
           echo Install OTL
           curl https://raw.githubusercontent.com/OTLanguage/download/main/mac.sh | sh
+      - name: 'install poison model'
+        run: otl install poison
