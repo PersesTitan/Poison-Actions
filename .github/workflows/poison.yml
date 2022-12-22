@@ -28,7 +28,6 @@ jobs:
         run: | 
           sh $OTL_HOME/otl install poison
         shell: bash
-      
       # 실행
       - name: 'start'
         run: |
