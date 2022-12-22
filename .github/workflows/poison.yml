@@ -14,10 +14,12 @@ jobs:
     steps:
       # 환경 변수 설정
       - name: 'set env'
-        env:
-          OTL_HOME: ${{ home }}/.otl
-          otl: sh ${{ OTL_HOME }}/otl
+#        env:
+#          OTL_HOME: $HOME/.otl
+#          otl: sh $HOME/otl
         run: |
+          echo "OTL_HOME=$HOME/.otl" >> $GITHUB_ENV
+          echo "otl=sh $HOME/otl" >> $GITHUB_ENV
           echo OTL_HOME = $OTL_HOME
           echo otl = $otl
         
