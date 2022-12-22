@@ -20,14 +20,8 @@ jobs:
         run: |
           echo OTL_HOME = $OTL_HOME
           echo otl = $otl
-      
-      # 경로 설정
-      - name: 'set path'
-        run: |
-          echo ::add-path::$HOME/.otl
-          echo ::add-path::$HOME/.otl/run-tool
-          echo ::add-path::$HOME/.otl/module
-          echo ::add-path::$HOME/.otl/analyzer
+          lets-see -a
+
         
       - name: 'otl install'
         run: |
