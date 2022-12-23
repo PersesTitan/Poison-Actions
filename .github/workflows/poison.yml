@@ -10,7 +10,6 @@ on:
 jobs:
   build:
     runs-on: macos-latest
-    
     steps:
       # 환경 변수 설정
       - name: 'set env'
@@ -32,8 +31,13 @@ jobs:
       
       - name: 'test'
         run: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          brew install tree
+          tree
+          tree $HOME
+          cd "$HOME"
+          tree
           ls
-          cat /Users/runner/work/Poison-Actions/Poison-Actions/start.otl
         shell: 'bash'
         
       # 실행
