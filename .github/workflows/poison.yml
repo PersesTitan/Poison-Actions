@@ -33,7 +33,7 @@ jobs:
       - name: 'test'
         run: |
           ls
-          pwd
+          cat /Users/runner/work/Poison-Actions/Poison-Actions/start.otl
         shell: 'bash'
         
       # 실행
