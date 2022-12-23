@@ -8,6 +8,15 @@ on:
     branches: [ main ]
 
 jobs:
+  checkout:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: actions/checkout
+          ref: v3
+      - run: ls
+
   build:
     runs-on: macos-latest
     steps:
@@ -33,9 +42,6 @@ jobs:
         run: |
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
           brew install tree
-          tree
-          tree $HOME
-          cd "$HOME"
           tree
           ls
         shell: 'bash'
