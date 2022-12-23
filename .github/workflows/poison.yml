@@ -16,17 +16,26 @@ jobs:
       - name: 'set env'
         run: |
           echo "OTL_HOME=$HOME/.otl" >> $GITHUB_ENV
-        
+
+      # OTLanguage 다운로드
       - name: 'otl install'
         run: |
           echo Install OTL
           curl https://raw.githubusercontent.com/OTLanguage/download/main/mac.sh | sh
         shell: bash
+        
       # 모듈 다운로드
       - name: 'install poison model'
         run: | 
           sh $OTL_HOME/otl install poison
         shell: bash
+      
+      - name: 'test'
+        run: |
+          ls
+          pwd
+        shell: 'bash'
+        
       # 실행
       - name: 'start'
         run: |
