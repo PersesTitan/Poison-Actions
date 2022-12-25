@@ -11,11 +11,9 @@ jobs:
   checkout:
     runs-on: macos-latest
     steps:
+      - run: ls -al
       - uses: actions/checkout@v3
-        with:
-          ref: v3
-      - run: ls
-
+  
   build:
     runs-on: macos-latest
     steps:
@@ -37,14 +35,11 @@ jobs:
           sh $OTL_HOME/otl install poison
         shell: bash
       
+
       - name: 'test'
         run: |
-          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-          brew install tree
-          tree
-          ls
-        shell: 'bash'
-        
+          ls -al
+
       # 실행
       - name: 'start'
         run: |
